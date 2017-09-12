@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <link rel="shortcut icon" href="http://os.zheng0716.com/static/image/favicon.ico" />
+    <title>Impress-electron</title>
+    <link href="./static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="./static/style/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div id="impress">
+        <div id="abc" class="step" data-x="0" data-y="0">
+            <p>abc</p>
+        </div>
+        <div id="overview" class="step" data-x="0" data-y="0" data-scale="2"></div>
+    </div>
+    <!-- control -->
+    <div class="Control">
+        <audio id="impress" src="./static/audio/bgi.mp3" controls loop></audio> <!-- autoplay /> -->
+        <i class="fa fa-arrows frame-drag" aria-hidden="true"></i>
+    </div>
+    <!-- scripts -->
+    <div style="display: none;">
+        <script src="./static/lib/impress/impress.min.js"></script>
+        <script src="./static/script/index.es6"></script>
+    </div>
+</body>
+
+</html>

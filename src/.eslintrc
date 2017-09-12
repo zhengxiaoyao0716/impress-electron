@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "rules": {
+        "no-new-func": "error",
+        "no-extend-native": "error",
+        "comma-dangle": ["error", "always"],
+        "eol-last": "error",
+        "prefer-template": "error",
+        "func-style": "error",
+        "semi": "error",
+        "quotes": ["error", "single"]
+    }
+}

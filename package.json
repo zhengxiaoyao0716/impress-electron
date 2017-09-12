@@ -1,0 +1,20 @@
+{
+  "name": "electron-impress",
+  "version": "1.0.0",
+  "description": "A presentation appliction based on Impress.js and Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/zhengxiaoyao0716/electron-impress",
+  "keywords": [
+    "Electron",
+    "Impress",
+    "presentation"
+  ],
+  "author": "zhengxiaoyao0716",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}
