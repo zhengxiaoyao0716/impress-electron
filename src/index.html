@@ -9,19 +9,219 @@
     <title>Impress-electron</title>
     <link href="./static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="./static/style/index.css" rel="stylesheet" />
+    <link href="./static/style/practice.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="bg"></div>
+    <p class="hint">Use a spacebar or arrow keys to navigate</p>
+    <!-- impress -->
     <div id="impress">
-        <div id="abc" class="step" data-x="0" data-y="0">
-            <p>abc</p>
+        <div id="welcome" class="step center" data-x="0" data-y="0">
+            <h1 class="target" style="--color: #7C4DFF;">个人资料<small>与</small>实习信息：</h1>
+            <div class="card">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><i class="fa fa-user" aria-hidden="true" style="--color: #ff5252;"></i></td>
+                            <td>姓　　名　　</td>
+                            <td>陈正</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-bank" aria-hidden="true" style="--color: #03A9F4;"></i></td>
+                            <td>班　　级　　</td>
+                            <td>计1403</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-phone" aria-hidden="true" style="--color: #ffeb3b;"></i></td>
+                            <td>学　　号　　</td>
+                            <td>41455077</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-sitemap" aria-hidden="true" style="--color: #4caf50;"></i></td>
+                            <td>实习公司　　</td>
+                            <td>完美世界 - 星云工作室</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-crosshairs" aria-hidden="true" style="--color: #9C27B0;"></i></td>
+                            <td>实习岗位　　</td>
+                            <td>游戏Java开发工程师</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img src="./static/image/mylogo.png" alt="mylogo">
+            </div>
         </div>
+        <div id="skill-0" class="step center" data-x="80" data-y="60" data-z="-100">
+            <h1 class="target" style="--color: #7C4DFF;">技能展示<small>之</small>语言能力</h1>
+            <div class="card">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Python2&amp;3</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Js|Es|Ts|Node</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HTML|CSS</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Java|C#|C</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Go|SQL|Matlab</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img src="./static/image/photo.jpg" alt="photo">
+            </div>
+        </div>
+        <div id="skill-1" class="step center" data-x="160" data-y="120" data-z="-200">
+            <h1 class="target" style="--color: #7C4DFF;">技能展示<small>之</small>擅长领域</h1>
+            <div class="card">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Web前后端</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PC|移动端</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>游戏开发</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img src="./static/image/photo1.jpg" alt="photo">
+            </div>
+        </div>
+        <div id="skill-2" class="step center" data-x="240" data-y="180" data-z="-300">
+            <h1 class="target" style="--color: #7C4DFF;">技能展示<small>之</small>辅助工具</h1>
+            <div class="card">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>运维(Linux|Docker)</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>美术(PS|3DsMax)</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>音乐(FL Studio)</td>
+                            <td>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img src="./static/image/photo2.jpg" alt="photo">
+            </div>
+        </div>
+
+        <div></div>
+
         <div id="overview" class="step" data-x="0" data-y="0" data-scale="2"></div>
     </div>
     <!-- control -->
-    <div class="Control">
-        <audio id="impress" src="./static/audio/bgi.mp3" controls loop></audio> <!-- autoplay /> -->
+    <div id="control">
+        <a href="https://github.com/zhengxiaoyao0716/impress-electron" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="32">
+                <linearGradient id="b" x2="0" y2="100%">
+                    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+                    <stop offset="1" stop-opacity=".1"/>
+                </linearGradient>
+                <mask id="a">
+                    <rect width="120" height="32" rx="3" fill="#fff"/>
+                </mask>
+                <g mask="url(#a)">
+                    <path fill="#555" d="M0 0h50v32H0z" />
+                    <path fill="#6677f7" d="M50 0h70v32H50z" />
+                    <path fill="url(#b)" d="M0 0h120v32H0z" />
+                </g>
+                <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="15">
+                    <text x="25" y="20" fill="#010101" fill-opacity=".3">view</text>
+                    <text x="85" y="20" fill="#010101" fill-opacity=".3">GitHub</text>
+                    <text x="25" y="21">view</text>
+                    <text x="85" y="21">GitHub</text>
+                </g>
+            </svg>
+        </a>
+        <audio src="./static/audio/bgi.mp3" controls loop></audio>
+        <!-- <audio src="./static/audio/bgi.mp3" controls loop autoplay></audio> -->
         <i class="fa fa-arrows frame-drag" aria-hidden="true"></i>
     </div>
     <!-- scripts -->

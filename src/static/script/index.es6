@@ -1,4 +1,4 @@
-impress().init();  // eslint-disable-line no-undef
+impress('impress').init();  // eslint-disable-line no-undef
 
 {
     ((keys, fn) => keys.forEach(key => addEventListener(key, fn)))(

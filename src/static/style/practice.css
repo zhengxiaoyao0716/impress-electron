@@ -1,0 +1,64 @@
+body.impress-on-skill-0 #welcome,
+body.impress-on-skill-1 #welcome,
+body.impress-on-skill-2 #welcome,
+body.impress-on-skill-1 #skill-0,
+body.impress-on-skill-2 #skill-0,
+body.impress-on-skill-2 #skill-1 {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px -20px #fff;
+}
+.card>img {
+    width: 290px;
+    height: 290px;
+}
+.card>table {
+    width: 490px;
+    height: 290px;
+    font-size: 20pt;
+}
+.card>table tr>td:first-child>i {
+    background: #000;
+    color: #fff;
+    border: 8pt solid #000;
+    border-radius: 50%;
+    width: 16pt;
+    height: 16pt;
+    font-size: 16pt;
+    background-color: var(--color);
+    border-color: var(--color);
+}
+.card>table tr {
+    vertical-align: bottom;
+}
+.card>table td:last-child {
+    border-bottom: 1px solid #fff;
+}
+
+.target {
+    background: var(--color);
+    color: #fff;
+    height: 36pt;
+    font-size: 30pt;
+    line-height: 36pt;
+    position: relative;
+    left: -30px;
+    width: 500px;
+}
+.target::after {
+    position: absolute;
+    right: -17pt;
+    top: 0;
+    border-top: 18pt solid transparent;
+    border-left: 18pt solid var(--color);
+    border-bottom: 18pt solid transparent;
+    content: "";
+}
