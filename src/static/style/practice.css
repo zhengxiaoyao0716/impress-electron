@@ -3,10 +3,18 @@ body.impress-on-skill-1 #welcome,
 body.impress-on-skill-2 #welcome,
 body.impress-on-skill-1 #skill-0,
 body.impress-on-skill-2 #skill-0,
-body.impress-on-skill-2 #skill-1 {
+body.impress-on-skill-2 #skill-1,
+body .step.intro-back:not(.active) {
     opacity: 0;
     transition: opacity 0.6s ease;
 }
+body.impress-on-myChoise .intro-front,
+body.impress-on-whyChoise .intro-front,
+body.impress-on-afterChoise .intro-front {
+    filter: blur(30px);
+    transition: filter 6s ease;
+}
+
 .card {
     display: flex;
     justify-content: center;
@@ -50,6 +58,7 @@ body.impress-on-skill-2 #skill-1 {
     font-size: 30pt;
     line-height: 36pt;
     position: relative;
+    align-self: flex-start;
     left: -30px;
     width: 500px;
 }
@@ -61,4 +70,31 @@ body.impress-on-skill-2 #skill-1 {
     border-left: 18pt solid var(--color);
     border-bottom: 18pt solid transparent;
     content: "";
+}
+
+.paper>* {
+    position: absolute;
+    display: block;
+}
+
+article {
+    padding: 10px;
+}
+article>* {
+    margin: 0;
+}
+article>h1 {
+    text-decoration: underline;
+}
+article .center {
+    width: 100%;
+    text-align: center;
+}
+article section h3 {
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--gray);
+    margin-bottom: 0;
+}
+article section *:not(h3) {
+    margin-left: 20pt;
 }
