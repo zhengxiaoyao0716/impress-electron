@@ -14,14 +14,6 @@
 </head>
 
 <body>
-    <video id="op" onended="op.remove(); bgi.play();" autoplay playsinline preload="auto">
-        <source src="./static/video/start.mp4">
-    </video>
-    <p class="hint">Use a spacebar or arrow keys to navigate</p>
-    <div id="goodbye">
-        <h1>以上，我的报告结束，谢谢</h1>
-        <h3>有什么不足之处或改进意见，还请各位老师不吝赐教</h3>
-    </div>
     <!-- impress -->
     <div id="impress">
         <div id="welcome" class="step center intro-front" data-x="0" data-y="0">
@@ -217,14 +209,14 @@
             </h3>
             <h1 class="animated" style="--name: bounceInUp; animation-delay: 3.5s;">
                 <span>我选择了在</span>
-                <a class="animated" style="--name: bounce; animation-delay: 4s;" href="http://www.wanmei.com/zh/intro.html" target="_blank">完美世界</a>
+                <a class="animated" style="--name: bounce; animation-delay: 4s; color: #03A9F4;" href="http://www.wanmei.com/zh/intro.html" target="_blank">完美世界</a>
                 <span>，完成本次实习任务</span>
             </h1>
         </div>
         <div id="whyChoise" class="step center intro-back" data-x="80" data-y="60" data-z="-2900" data-rotate-x="180">
             <h1>
                 <span>于我而言，</span>
-                <span class="animated" style="color: #00f; transform: rotate(10deg);">完美世界</span>
+                <span class="animated" style="color: #03A9F4; transform: rotate(10deg);">完美世界</span>
                 <span>意味着：</span>
             </h1>
             <ul>
@@ -347,7 +339,7 @@
             <article>
                 <h1>然后是Javascript</h1>
                 <p class="animated" style="--name: bounceInLeft; animation-delay: 0.5s;">拥抱Web，拥抱H5，拥抱Js，拥抱开源，拥抱新思想，拥抱未来</p><br>
-                <img class="animated" style="--name: bounceInLeft; animation-delay: 1s;" src="./static/image/Java.png" alt="Java">
+                <img class="animated" style="--name: bounceInLeft; animation-delay: 1s;" src="./static/image/Javascript.png" alt="Javascript">
             </article>
         </div>
 
@@ -533,13 +525,19 @@
             </article>
         </div>
         <div id="go1" class="step board center" data-x="-1400" data-y="1800" data-rotate-z="0" data-rotate-y="0" data-rotate-x="-75">
+            <div class="frame paper">
+                <h3 style="transform: rotate(-10deg); left: -100px; top: -50px; color: #FFA000;">keyword: 学生 路人 游戏从业者 - 不同人眼中的游戏</h3>
+            </div>
             <h1 style="color: #388E3C;">对游戏的认识</h1>
-            <a class="animated" style="--name: zoomIn; animation-delay: 1s; position: relative;" href="./static/video/cg.mp4" target="_blank">
+            <a class="animated" style="--name: zoomIn; animation-delay: 1s; position: relative;" href="javascript: bgi.pause(); op.src = './static/video/cg.mp4'; op.classList.remove('fadeOut'); op.style.display = 'block'; op.play();" target="_blank">
                 <img src="./static/image/go1.png" alt="go1">
                 <i class="fa fa-play" style="color: var(--light); position: absolute; left: 0; top: 25%; width: 100%; text-align: center; font-size: 10em; opacity: 0.6;" aria-hidden="true"></i>
             </a>
         </div>
         <div id="go2" class="step board center" data-x="-2200" data-y="1400" data-rotate-z="30" data-rotate-x="-60" data-rotate-y="-60">
+            <div class="frame paper">
+                <h3 style="transform: rotate(10deg); left: -150px; bottom: -50px; color: #2196F3;">keyword: 第一次，身边有如此多的程序员</h3>
+            </div>
             <h1 style="color: #E64A19;">对程序的热情</h1>
             <a class="animated" style="--name: zoomIn; animation-delay: 1s; position: relative;" href="https://github.com/zhengxiaoyao0716?tab=repositories"
                 target="_blank">
@@ -547,10 +545,16 @@
             </a>
         </div>
         <div id="go3" class="step board center" data-x="-1800" data-y="600" data-rotate-z="180" data-rotate-y="0" data-rotate-x="75">
+            <div class="frame paper">
+                <h3 style="transform: rotate(-10deg); right: -100px; bottom: -50px; color: #FF4081;">keyword: 军 宅 正</h3>
+            </div>
             <h1 style="color: #3F51B5;">对自己的思考</h1>
             <img class="animated" style="--name: zoomIn; animation-delay: 1s;" src="./static/image/go3.png" alt="go3">
         </div>
         <div id="go4" class="step board center" data-x="-1000" data-y="1000" data-rotate-z="210" data-rotate-y="60" data-rotate-x="60">
+            <div class="frame paper">
+                <h3 style="transform: rotate(10deg); right: -100px; top: -50px; color: #8BC34A;">keyword: 校园 社会</h3>
+            </div>
             <h1 style="color: #9C27B0;">对未来的规划</h1>
             <div>
                 <img class="animated" style="--name: zoomIn; animation-delay: 1s;" src="./static/image/go4-0.jpg" alt="go4-0">
@@ -560,6 +564,15 @@
 
         <div id="overview" class="step" data-x="0" data-y="0" data-scale="5"></div>
     </div>
+    <!-- covers -->
+    <p class="hint">Use a spacebar or arrow keys to navigate</p>
+    <div id="goodbye">
+        <h1>以上，我的报告结束，谢谢</h1>
+        <h3>有什么不足之处或改进意见，还请各位老师不吝赐教</h3>
+    </div>
+    <video id="op" class="animated" onended="op.classList.add('fadeOut'); setTimeout(() => { op.style.display = 'none'; bgi.play(); }, 1000);" autoplay playsinline preload="auto" controls>
+        <source src="./static/video/start.mp4">
+    </video>
     <!-- control -->
     <div id="control">
         <a href="https://github.com/zhengxiaoyao0716/impress-electron" target="_blank">

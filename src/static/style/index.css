@@ -154,7 +154,7 @@ body.impress-on-overview #goodbye>* {
     width: 100%;
     height: 100%;
     opacity: 0.8;
-    background: linear-gradient(150deg, var(--color), rgba(255, 255, 255, 0.6));
+    background: linear-gradient(150deg, var(--color), rgba(255, 255, 255, 0.3));
 }
 .step .frame {
     position: absolute;

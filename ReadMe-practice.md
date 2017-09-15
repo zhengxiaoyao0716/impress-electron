@@ -33,6 +33,24 @@ var o = { // 难以置信的简洁强大
 
 ### Javascript
 ``` Javascript
-(url => fetch(url))(url).then(d => d.filter(v => v))
-    .then(d => d.length ? resolve(d) : reject('error'))
+getOrPost(url, function (raw) {
+    var data = [];
+    for (var i = 0; i < raw.length; i++) {
+        raw[i] && data.add(raw[i]);
+    }
+    if (!data.length) {
+        throw new Error('error');
+    }
+    var sum = 0;
+    for (var i = 0; i < data.length; i++) {
+        sum += data[i].count * data[i].weight;
+    }
+    console.log(sum);
+});
+```
+``` es6
+fetch(url).then(d => d.filter(v => v))
+    .then(d => d.length ? d : reject('error'))
+    .then(d => d.reduce((l, { count, weight }) => l + count * weight, 0))
+    .then(console.log);
 ```
