@@ -1,0 +1,28 @@
+.Draft {
+    background: #fff;
+    color: #333;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    top: 0;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    font-size: 0.8em;
+    word-break: keep-all;
+}
+.Draft:hover {
+    opacity: 1;
+}
+.Draft::after {
+    position: absolute;
+    bottom: -1em;
+    left: 10%;
+    content: "";
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 1em solid #fff;
+}
+.Draft.line, .Draft .line {
+    white-space: nowrap;
+}
