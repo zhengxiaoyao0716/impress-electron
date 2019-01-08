@@ -1,0 +1,144 @@
+.转正述职 .title {
+    text-align: center;
+    font-family: 隶书;
+    font-size: 60px;
+}
+.转正述职 .subtitle {
+    text-align: center;
+    font-size: 28px;
+}
+.转正述职 .subtitle:not(.no-font) {
+    font-family: 华文隶书;
+}
+.转正述职 .content-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+}
+.转正述职 .content-list>* {
+    padding-left: 4em;
+    margin: 0.8em;
+}
+body.impress-on-contents .转正述职 .step:not(#contents) {
+    display: none;
+}
+.转正述职 .chapter-title {
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    left: -200px;
+    top: -50px;
+    padding-left: 1.5em;
+    font-size: 28px;
+}
+.转正述职 .chapter-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1em;
+    height: 1.5em;
+    background: url(./../image/chapter-icon.png) no-repeat center;
+    background-size: contain;
+}
+
+.转正述职 .chapter {
+    background: url(./../image/chapter-bg.png) no-repeat center;
+    background-size: contain;
+    width: 600px;
+    height: 800px;
+}
+.转正述职 .chapter>h1 {
+    margin-top: 150px;
+    font-size: 80px;
+}
+.转正述职 .chapter>h3 {
+    margin-top: 150px;
+    font-size: 28px;
+}
+body.impress-on-chapter01 .转正述职 .step:not(#chapter01) {
+    display: none;
+}
+
+.转正述职 .timeline {
+    width: 800px;
+    height: 60%;
+    position: relative;
+}
+.转正述职 .timeline>#pregress {
+    position: absolute;
+    width: 1000px;
+    height: 1px;
+    left: -100px;
+    bottom: 0;
+    border-bottom: #fff solid 1px;
+    animation: timeline-growth 6s linear none;
+}
+@keyframes timeline-growth {
+    0% {
+        width: 0;
+    }
+}
+.转正述职 .timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 18px;
+    font-weight: bold;
+}
+.转正述职 .timeline>.section::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    margin-top: -4px;
+    background: #fff;
+    border-radius: 4px;
+}
+.转正述职 .timeline>.section>span {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    bottom: 100px;
+    margin-left: -75px;
+}
+.转正述职 .timeline>.section>span>* {
+    display: block;
+}
+.转正述职 .timeline>.section>span::after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 0px;
+    left: 75px;
+    top: 50px;
+    border-right: #fff dashed 1px;
+}
+.转正述职 .timeline>.section:nth-child(odd)>span:first-child {
+    bottom: 250px;
+}
+.转正述职 .timeline>.section:nth-child(odd)>span:first-child::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    width: 130px;
+    height: 130px;
+    left: 10px;
+    top: -50px;
+    border-radius: 65px;
+}
+.转正述职 .timeline>.section:nth-child(odd)>span:first-child::after {
+    top: 100px;
+    height: 30px;
+}
+.转正述职 .timeline>.section:nth-child(even)>span {
+    bottom: 170px;
+}
+.转正述职 .timeline>.section:nth-child(even)>span::after {
+    height: 150px;
+}

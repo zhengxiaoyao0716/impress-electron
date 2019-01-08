@@ -1,0 +1,17 @@
+#timer {
+    position: absolute;
+    height: 3px;
+    left: 0;
+    top: 0;
+    animation: timer-gradient var(--time) forwards;
+}
+@keyframes timer-gradient {
+    0% {
+        width: 0vw;
+        background: var(--yes);
+    }
+    100% {
+        width: 100vw;
+        background: var(--error);
+    }
+}

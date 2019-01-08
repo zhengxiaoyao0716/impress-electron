@@ -7,406 +7,158 @@
     <meta name="Description" content="" />
     <link rel="shortcut icon" href="http://os.zheng0716.com/static/image/favicon.ico" />
     <title>Impress-electron</title>
-    <link href="./static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="./static/lib/animate/animate.css" rel="stylesheet" />
-    <link href="./static/style/index.css" rel="stylesheet" />
-    <link href="./static/style/practice.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/vs2015.css">
+    <link rel="stylesheet" href="./static/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./static/lib/animate/animate.css" />
+    <link rel="stylesheet" href="./static/style/index.css" />
+    <link rel="stylesheet" href="./static/style/practice.css" />
 </head>
 
 <body>
+    <!-- background -->
+    <div class="Background trans">
+        <link rel="stylesheet" href="./static/style/background.css" />
+        <script src="./static/script/background.js"></script>
+    </div>
     <!-- impress -->
-    <div id="impress">
-        <div id="welcome" class="step center intro-front" data-x="0" data-y="0">
-            <h1 class="target" style="--color: #7C4DFF;">Programming<small>In</small>2018</h1>
-            <p style="font-size: 3em;">这不是教程，只是整理。</p>
-            <p style="font-size: 3em;">错漏之处望见谅。</p>
+    <div id="impress" class="转正述职">
+        <link rel="stylesheet" href="./static/style/转正述职.css">
+        <div id="welcome" class="step center" data-x="0" data-y="0">
+            <h1 class="title">转正述职报告</h1>
+            <h3 class="subtitle">——————— 第七项目中心　陈正 ———————</h3>
         </div>
-        <div id="myChoise" class="step center intro-back" data-x="0" data-y="0" data-z="-3000" data-rotate-x="180">
-            <h1>大纲</h1>
-            <div style="display: flex;">
-                <span class="animated" style="padding: 1.2em; animation-delay: 1.0s; font-size: 2em; color: #CDDC39; --name: bounceInDown;">不可变、无状态与状态管理</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 1.5s; font-size: 2em; color: #9d7adc; --name: bounceIn;">用Steam（流）规避循环</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 2.0s; font-size: 2em; color: #FF5722; --name: rotateIn;">条件与分支</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 2.5s; font-size: 2em; color: #03A9F4;--name: bounceInUp">结构与解构</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 3.0s; font-size: 2em; color: #FFEB3B; --name: rotateIn;">模式匹配</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 3.5s; font-size: 2em; color: #4CAF50; --name: bounceIn;">链式</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 4.0s; font-size: 2em; color: #6cf; --name: bounceInDown;">逻辑同步的异步</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 4.5s; font-size: 2em; color: #f0f; --name: bounceInUp;">元编程</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 5.0s; font-size: 2em; color: #8BC34A; --name: rotateIn;">非面向对象的抽象</span>
-                <span class="animated" style="padding: 1.2em; animation-delay: 5.5s; font-size: 2em; color: #ad1423;--name: bounceInDown;">其它</span>
+        <div id="contents" class="step intro-back" data-x="0" data-y="0" data-z="-3000" data-rotate-x="180">
+            <h1 class="subtitle no-font">—————— CONTENTS ——————</h1>
+            <div class="content-list ">
+                <span class="animated" style="animation-delay: 1.0s; --name: bounceInLeft;">
+                    1、自我介绍
+                </span>
+                <span class="animated" style="animation-delay: 1.5s; --name: bounceInLeft;">
+                    2、工作回顾/工作概况
+                </span>
+                <span class="animated" style="animation-delay: 2.0s; --name: bounceInLeft;">
+                    3、职业规划/成长与思考/工作规划与展望
+                </span>
+                <span class="animated" style="animation-delay: 2.5s; --name: bounceInLeft">
+                    4、对星云的建议
+                </span>
             </div>
         </div>
 
-        <div id="gain-language" class="step center" data-x="-800" data-y="-600" data-rotate="-30">
-            <h1 class="animated" style="--name: flip; animation-delay: 0.6s;">不可变、无状态与状态管理</h1>
-            <div class="frame paper animated infinite" style="--name: pulse;">
-                <h2 style="transform: rotate(60deg); left: 500px; top: 160px; color: #FFA000;">引用</h2>
-                <h2 style="transform: rotate(-20deg); left: 500px; top: 350px; color: #FFEB3B;">指针</h2>
-                <h2 style="transform: rotate(-50deg); left: 700px; top: 100px; color: #FF4081;">传值</h2>
-                <h2 style="transform: rotate(-80deg); left: 200px; top: 400px; color: #E64A19;">struct</h2>
-                <h2 style="transform: rotate(10deg); left: 400px; top: 400px; color: #03a9f4;">Deep Copy</h2>
-                <h2 style="transform: rotate(-30deg); left: 30px; top: 60px; color: #4CAF50;">immutable</h2>
-                <h2 style="transform: rotate(60deg); left: 650px; top: 500px; color: #E040FB;">STM</h2>
-                <h2 style="transform: rotate(90deg); left: 100px; top: 300px; color: #009688;">state</h2>
-                <h2 style="transform: rotate(30deg); left: 50px; top: 500px; color: #F44336;">trigger</h2>
-                <h2 style="transform: rotate(20deg); left: 250px; top: 100px; color: #00BCD4;">数据库</h2>
-                <h2 style="transform: rotate(-15deg); left: 350px; top: 550px; color: #D1C4E9;">结构体</h2>
-                <h2 style="transform: rotate(5deg); left: 750px; top: 350px; color: #FFF9C4;">不可变</h2>
+        <div id="chapter01" class="step center" data-x="-800" data-y="-600" data-rotate="-30">
+            <div class="chapter">
+                <h1>01</h1>
+                <h3>自我介绍</h3>
             </div>
         </div>
-        <div id="gl0" style="--color: #03a9f4;" class="step board" data-x="-1550" data-y="-1250" data-rotate="-30"><pre style="margin: 0; font-size: 0.8em;" class="hljs javascript">        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Page</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-            state = {
-                <span class="hljs-attr">project</span>: {
-                    <span class="hljs-attr">info</span>: <span class="hljs-string">''</span>,
-                    <span class="hljs-attr">user</span>: [],
-                }
-            }
-            onUserPull = <span class="hljs-function"><span class="hljs-params">users</span> =&gt;</span> <span class="hljs-keyword">this</span>.setState({
-                <span class="hljs-attr">project</span>: {
-                    ...this.state.project,
-                    <span class="hljs-attr">user</span>: [
-                        ...this.state.project.user,
-                        users,
-                    ],
-                },
-            });
-            render() {
-                <span class="hljs-keyword">return</span> (
-                    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>{Object.entries(this.state.user).map((name, users) =&gt; (
-                        <span class="hljs-tag">&lt;<span class="hljs-name">List</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">ListHead</span>&gt;</span>{name}<span class="hljs-tag">&lt;/<span class="hljs-name">ListHead</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">ListBody</span>&gt;</span>{users.map({ name, phone } =&gt; (
-                                <span class="hljs-tag">&lt;<span class="hljs-name">ListItem</span>&gt;</span>
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">Text</span>&gt;</span>Name: {namme}<span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">Text</span>&gt;</span>Phone: {namme}<span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">ListItem</span>&gt;</span>
-                            ))}<span class="hljs-tag">&lt;/<span class="hljs-name">ListBody</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">ListFoot</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span>
-                                    pullUser().then(this.onUserPull)
-                                }&gt;More<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">ListFoot</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">List</span>&gt;</span>
-                    ))}<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></span>
-                );
-            }
-        }
-        <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Page;</pre></div>
-        <div id="gl1" class="step board" data-x="-2300" data-y="-500" data-rotate="-60"><pre style="margin: 0; font-size: 0.8em; height: 100%;" class="hljs javascript">        <span class="hljs-keyword">const</span> store = {
-            <span class="hljs-attr">project</span>: {
-                <span class="hljs-attr">info</span>: <span class="hljs-string">''</span>,
-                <span class="hljs-attr">user</span>: [],
-            },
-        };
-        <span class="hljs-keyword">const</span> reduce = {
-            <span class="hljs-attr">project</span>: {
-                <span class="hljs-attr">user</span>: {
-                    <span class="hljs-attr">join</span>: <span class="hljs-function">(<span class="hljs-params">state, usesr</span>) =&gt;</span> [...state, users],
-                },
-            }
-        };
-        <span class="hljs-keyword">const</span> Page = <span class="hljs-function">(<span class="hljs-params">{ project: { info, user } }, { dispatch }</span>) =&gt;</span> (
-            <span class="hljs-comment">// ...</span>
-            &lt;Button onClick={() =&gt;
-                pullUser().then(<span class="hljs-function"><span class="hljs-params">users</span> =&gt;</span> dispatch({ <span class="hljs-attr">type</span>: <span class="hljs-string">'project.user.join'</span>, <span class="hljs-attr">payload</span>: users }))
-            }&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>
-            <span class="hljs-comment">// ...</span>
-        );
-        <span class="hljs-keyword">export</span> connect({ project } =&gt; { project })(Page);</pre></div>
-        <div id="gl2" class="step board" data-x="-500" data-y="-1500" data-rotate="-0"><pre style="margin: 0; font-size: 0.8em; height: 100%;" class="hljs javascript">        <span class="hljs-string">`
-            Q      !
-            |      Q
-            o      |
-            [&amp;]-|  o
-            | |_|_[&amp;]
-            |   |_| |
-            R       S
-        `</span></pre></div>
-        <div class="step center" data-x="-1550" data-y="-1150" data-z="-2000" data-rotate="30" data-rotate-x="180">
-            <h1 class="animated" style="--name: flip; animation-delay: 0.6s;">用Steam（流）规避循环</h1>
-        </div>
-        <div class="step board" data-x="-1550" data-y="-1150" data-z="-100" data-rotate="30" data-rotate-x="180"><pre style="margin: 0; font-size: 0.6em;" class="hljs java">        <span class="hljs-comment">// ### 循环：</span>
-        {
-            <span class="hljs-comment">// - [each](file:///E:\MyProject\Project\sd\code\server\base\world\src\com\pwrd\yt\worldsrv\rank\RankGlobalService.java#L92)</span>
-            stream.forEach();
-            <span class="hljs-comment">// - [each-map](file:///E:\MyProject\Project\sd\code\server\base\world\src\com\pwrd\yt\worldsrv\rank\AbsGroupRankObject.java#303)</span>
-            stream().map().forEach();
-            <span class="hljs-comment">// - [each-filter](file:///E:\MyProject\Project\sd\code\server\base\world\src\com\pwrd\yt\worldsrv\rank\AbsGroupRankObject.java#149)</span>
-            stream().filter(shouldRank).forEach();
-        }
-        
-        <span class="hljs-comment">// ### 查找：</span>
-        {
-            <span class="hljs-comment">// - 查找位置：[filter-count](file:///E:\MyProject\Project\sd\code\server\base\world\src\com\pwrd\yt\worldsrv\singleTower\SingleTowerManager.java#L541)</span>
-            stream().filter().count();
-            <span class="hljs-comment">// - 查找元素：[filter-find](file:///E:\MyProject\Project\sd\code\server\base\world\src\com\pwrd\yt\worldsrv\rank\AbsGroupRankObject.java#L357)</span>
-            stream().filter().findAny().orElse();
-            <span class="hljs-comment">// - 元素&amp;位置：[filter-peek-find](file:///E:\MyProject\Project\sd\code\server\base\world\src\com\pwrd\yt\worldsrv\rank\AbsGroupRankObject.java#L283)</span>
-            AtomicInteger index = <span class="hljs-keyword">new</span> AtomicInteger();
-            E element = stream().peek().filter().findFirst().orElse();
-        }
-        
-        <span class="hljs-comment">// ### 安全迭代：</span>
-        {
-            <span class="hljs-comment">// - [range-else](file:///E:\MyProject\Project\sd\code\server\base\bridge\src\com\pwrd\yt\bridge\bridgeSeekHegemony\BridgeSeekHegemonyService.java#1990)</span>
-            IntStream.range(<span class="hljs-number">0</span>, limit).mapToObj(i -&gt; buildIterObj).map(doSth).peek(doSth).filter(Objects::nonNull).findFirst().orElseThrow(() -&gt; <span class="hljs-keyword">new</span> Exception());
-        }
-        
-        <span class="hljs-comment">// ### 切片采样：</span>
-        {
-            <span class="hljs-comment">// - [skip-limit](file:///E:\MyProject\Project\sd\code\server\base\world\src\com\pwrd\yt\worldsrv\rank\AbsGroupRankObject.java#232)</span>
-            stream().skip().limit().forEach();
-            <span class="hljs-comment">// - sort&amp;reverse:</span>
-            stream().sorted(Comparator.reverseOrder()).forEach();
-            <span class="hljs-comment">// - iterate:</span>
-            List&lt;String&gt; users = Arrays.asList(<span class="hljs-string">"Alice"</span>, <span class="hljs-string">"girl"</span>, <span class="hljs-string">"bob"</span>, <span class="hljs-string">"boy"</span>);
-            Set&lt;String&gt; names = IntStream.iterate(<span class="hljs-number">0</span>, i -&gt; <span class="hljs-number">1</span> + i)
-                    .mapToObj(users::get)
-                    .collect(Collectors.toSet());
-            Map&lt;String, String&gt; user = IntStream.iterate(<span class="hljs-number">0</span>, i -&gt; <span class="hljs-number">2</span> + i)
-                    .mapToObj(i -&gt; <span class="hljs-keyword">new</span> AbstractMap.SimpleImmutableEntry&lt;&gt;(users.get(i), users.get(<span class="hljs-number">1</span> + i)))
-                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        }
-        
-        <span class="hljs-comment">// ### 注意！</span>
-        <span class="hljs-comment">// - 保证数据的不可变</span>
-        <span class="hljs-comment">// - 谓词提取</span></pre></div>
-
-        <div id="gain-field" class="step center" data-x="800" data-y="-600" data-rotate="30">
-            <h1 class="animated" style="--name: flip; animation-delay: 0.6s;">条件与分支</h1>
-            <div class="frame paper animated infinite" style="--name: flash;">
-                <h1 style="transform: rotate(30deg); left: 400px; top: 150px; color: #FFA000;">流程控制</h1>
-                <h1 style="transform: rotate(-60deg); left: 550px; top: 350px; color: #FFEB3B;">表达式</h1>
-                <h1 style="transform: rotate(-30deg); left: 600px; top: 200px; color: #FF4081;">轴映射</h1>
-                <h1 style="transform: rotate(-15deg); left: 100px; top: 350px; color: #E64A19;">逻辑短路</h1>
-                <h1 style="transform: rotate(10deg); left: 400px; top: 400px; color: #03a9f4;">if-elif-else</h1>
-                <h1 style="transform: rotate(-30deg); left: 200px; top: 60px; color: #4CAF50;">switch</h1>
-                <h2 style="transform: rotate(60deg); left: 100px; top: 200px; color: #E040FB;">三目</h2>
-            </div>
-        </div>
-        <div id="gf1" class="step board" data-x="1400" data-y="-1800" data-rotate-z="180" data-rotate-y="0" data-rotate-x="75">
-            <article style="font-size: 0.9em;">
-                <h1>流程控制vs表达式</h1>
-                <span>重新审视三目：保证了值的确定与不变</span>
-                <pre><span class="hljs javascript">    <span class="hljs-keyword">let</span> variable;
-    <span class="hljs-keyword">if</span> (condition) {
-        variable = state0;
-    } <span class="hljs-keyword">else</span> {
-        variable = state1;
-    }
-    doSth(variable);</span></pre>
-                        <pre><span class="hljs javascript">    <span class="hljs-keyword">const</span> variable = condition ? state0 : state1;
-    doSth(variable);</span></pre>
-                <span>大量的 if-elif-else 造成逻辑的分歧</span>
-                <a href="https://www.zhihu.com/question/266058426/answer/302555580">轴映射</a>
-                <span>switch 也同理，可以用哈希表映射成表达式</span>
-                <pre><span class="hljs javascript">    <span class="hljs-keyword">const</span> variable = ({ <span class="hljs-comment">// 事实上，这种简单的状态机在动态语言非常常见，以至于有些语言不设switch语句。</span>
-        case0: state0,
-        <span class="hljs-attr">case1</span>: state1,
-        get case2() { <span class="hljs-comment">// 注意这个case2，通过getter访问器而不是简单值，提供了延迟执行能力</span>
-            doSth();
-            <span class="hljs-keyword">return</span> state2;
-        },
-    })[condition];</span></pre>
-                <span>基于这个原理，一个变量的是非常确定的，它不是因某个条件变成某个值，而是对一种状态就有一个值</span>
-            </article>
-        </div>
-        <div id="gf2" class="step board" data-x="2200" data-y="-1400" data-rotate-z="210" data-rotate-y="60" data-rotate-x="60">
-            <article>
-                <div class="paper" style="font-size: 0.7em;">
-                    <div class="animated" style="--name: zoomIn; animation-delay: 1s; left: -100px; top: 0px; width: 500px;" alt="gf1-0">
-                        <span style="display: block;">但事实上并不是说if-else, switch结构本身有错，而是像 goto 语句一样的，早期Basic这样面向过程的语言残留的缺陷。</span>
-                        <span style="display: block;">比如在一些函数式语言中，if-else事实上是长这样的：</span>
-                        <pre><span class="hljs lisp">    <span class="hljs-comment">; (set variable (if condition state0 (doSth state1))) ; 这是inline写法</span>
-    (<span class="hljs-name">set</span> variable (
-        <span class="hljs-name">if</span> condition (
-            <span class="hljs-name">state0</span>
-        ) (
-            <span class="hljs-name">doSth</span>
-            state1
-        )
-    ))</span></pre>
-                        <pre><span class="hljs elixir">    <span class="hljs-comment"># variable = if condition, do: state0, else: state1 # 这是inline写法</span>
-    variable = if condition <span class="hljs-keyword">do</span>
-        state<span class="hljs-number">0</span>
-    else
-        doSth
-        state1
-    <span class="hljs-keyword">end</span></span></pre>
-                        <span>上面两例都是表达式，它们根据条件真假，执行if或else作用域块内表达式，并返回最后的值。</span>
-                        <pre><span class="hljs autoit">    // 处于草案阶段但很多项目已经直接用上的JS的<span class="hljs-keyword">do</span>-<span class="hljs-keyword">if</span>
-    <span class="hljs-keyword">const</span> variable = <span class="hljs-keyword">do</span> {
-        <span class="hljs-keyword">if</span> condition {
-            state0<span class="hljs-comment">;</span>
-        } <span class="hljs-keyword">else</span> {
-            state1<span class="hljs-comment">;</span>
-        }
-    }<span class="hljs-comment">;</span></span></pre>
-                    </div>
-                    <div class="animated" style="--name: zoomIn; animation-delay: 1.5s; right: -20px; top: 0px; width: 400px;" alt="gf1-1">
-                        <span>另外， if 还有另一种常见场景，特殊逻辑处理，比如：</span>
-                        <pre><span class="hljs javascript">    <span class="hljs-keyword">if</span> (needDoSth) {
-        doSth();
-    }
-    doElse();</span></pre>
-                        <span>但如果所用的语言支持非布尔值的逻辑短路运算，其实这样更好：</span>
-                        <pre><span class="hljs less">    <span class="hljs-selector-tag">needDoSth</span> <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-tag">&amp;</span> <span class="hljs-selector-tag">doSth</span>();
-    <span class="hljs-selector-tag">doElse</span>();</span></pre>
-                        <span>同理还有：</span>
-                        <pre><span class="hljs less">    <span class="hljs-selector-tag">hasDone</span> || <span class="hljs-selector-tag">doSth</span>();
-    <span class="hljs-selector-tag">doElse</span>();</span></pre>
-                        <span>这样的好处也是将过程的分叉变成了普通的表达式求值问题。</span>
-                    </div>
+        <div id="chapter01-1" class="step center" data-x="-2300" data-y="-500" data-rotate="-60">
+            <h1 class="chapter-title">自我介绍</h1>
+            <div class="timeline">
+                <div class="section">
+                    <span class="animated" style="animation-delay: 1.0s; --name: fadeInDown;">
+                        <span>2015年08月</span>
+                    </span>
+                    <span class="animated" style="animation-delay: 1.0s; --name: fadeInDown;">
+                        <span>学校竞赛</span>
+                        <span>创业项目</span>
+                    </span>
                 </div>
-            </article>
-        </div>
-        <div id="gf3" class="step board" data-x="1800" data-y="-600" data-rotate-z="360" data-rotate-y="0" data-rotate-x="-75">
-            <span style="font-size: 0.9em;">看下面的例子：</span>
-            <pre style="font-size: 0.7em; margin: 0;"><span class="hljs javascript">{
-    <span class="hljs-comment">// T_T</span>
-    <span class="hljs-keyword">if</span> (user == <span class="hljs-literal">null</span>) {
-        <span class="hljs-keyword">return</span>;
-    }
-    show(user);
-
-    <span class="hljs-comment">// ^_^</span>
-    user &amp;&amp; show(user);
-}
-{
-    <span class="hljs-comment">// T_T</span>
-    <span class="hljs-keyword">if</span> (user == <span class="hljs-literal">null</span>) {
-        show(<span class="hljs-string">"not found"</span>);
-        <span class="hljs-keyword">return</span>;
-    }
-    show(user);
-
-    <span class="hljs-comment">// ^_^</span>
-    show(user || <span class="hljs-string">"not found"</span>);
-}
-{
-    <span class="hljs-comment">// T_T</span>
-    <span class="hljs-keyword">let</span> display = name;
-    <span class="hljs-keyword">if</span> (!user.name) {
-        display = user.id;
-    }
-    show(display);
-
-    <span class="hljs-comment">// ^_^</span>
-    show(user.name || user.id);
-}</span></pre>
-            <span style="font-size: 0.9em;">珍爱视力，谨防老花。</span>
-        </div>
-        <div id="gf4" class="step board" data-x="1000" data-y="-1000" data-rotate-z="390" data-rotate-x="-60" data-rotate-y="-60">
-            <article>
-                <span>残念，Java不支持支持非布尔的逻辑短路。但作为代替，Java提供了以下方法：</span>
-                <pre><span class="hljs Java">    user.ifPresent(show);
-    show(user.orElse(<span class="hljs-string">"not found"</span>));
-    show(user.getOrDefault(<span class="hljs-string">"name"</span>, user.get(<span class="hljs-string">"id"</span>)));</span></pre>
-                <span>但这可能是好事，避免了隐式的真值判断的混淆：</span>
-                <pre><span class="hljs javascript">[] == <span class="hljs-literal">false</span>
-![] == <span class="hljs-literal">false</span>
-[] == ![]
-<span class="hljs-literal">false</span> || <span class="hljs-string">'pass'</span> <span class="hljs-comment">// 'pass'</span>
-[] || <span class="hljs-string">'pass'</span> <span class="hljs-comment">// []</span>
-<span class="hljs-comment">// fuck.js</span></span></pre>
-            </article>
-        </div>
-        <div id="gf0" style="--color: #E64A19;" class="step" data-x="1600" data-y="-1200" data-rotate="30">
-            <article>
-                <h3 style="color: #fff;">分支收束 <a style="text-decoration: none; color: #5ccbfd;" href="E:MyProjectProjectsdcodeserverweeklyworldsrccompwrdytworldsrvactivitybridgeSeekHegemonyBridgeSeekHegemonyManager.java#L567">logic gather</a></h3>
-                <span style="font-size: 0.8em;">一些情况，逻辑实际是收束的，比如：123轮到Alice，456轮到Bob，周日（0）两人一起值日。</span>
-                <pre><span class="hljs javascript">    <span class="hljs-comment">// bad</span>
-    <span class="hljs-keyword">if</span> (tody == <span class="hljs-number">0</span>)  {
-        alice.works(...args);
-        bob.works(...args);
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tody &lt;= <span class="hljs-number">3</span>) {
-        alice.works(...args);
-    } <span class="hljs-keyword">else</span> {
-        bob.works(...args);
-    }
-
-    <span class="hljs-comment">// better</span>
-    <span class="hljs-keyword">const</span> works = <span class="hljs-keyword">do</span> {
-        <span class="hljs-keyword">if</span> (tody == <span class="hljs-number">0</span>)  {
-            (...args) =&gt; (alice.works(...args), bob.works(...args));
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tody &lt;= <span class="hljs-number">3</span>) {
-            alice.works;
-        } <span class="hljs-keyword">else</span> {
-            bob.works;
-        }
-    };
-    <span class="hljs-comment">// 注意这里 `alice` 与 `bob` 并没有关系，没必要Ta们有相同父类抽象之类的，只要能获取a或b或a&amp;b的绑定方法。</span>
-    works(...args);</span></pre>
-                <span style="font-size: 0.8em;">当然，这里坐标轴也很明显，换成轴映射就更清晰了：</span>
-                <pre><span class="hljs javascript">    <span class="hljs-keyword">const</span> whoes = [
-        (<span class="hljs-number">0</span>, [alice, bob]),
-        (<span class="hljs-number">3</span>, alice),
-        (<span class="hljs-number">6</span>, bob),
-    ].find(<span class="hljs-function">(<span class="hljs-params">[point, whoes]</span>) =&gt;</span> point &lt;= today)[<span class="hljs-number">1</span>];
-    combine(whoes).works(...args); <span class="hljs-comment">// 关于 `combine` 后面解释。</span></span></pre>
-                <span style="font-size: 0.8em;">或者换个角度，我们知道三种case对应不同的执行者，那么除了坐标轴外，我们也可以表达成映射表：</span>
-                <pre><span class="hljs javascript">    <span class="hljs-keyword">const</span> mapper = [[alice, bob], [alice], [bob]]; <span class="hljs-comment">// { 0: [alice, bob], 1: alice, 2: bob }</span>
-    <span class="hljs-keyword">const</span> whoes = mapper[<span class="hljs-string">'0111222'</span>[tody]]; <span class="hljs-comment">// JS是弱类型</span>
-    combine(whoes).works(...args);</span></pre>
-                <span style="font-size: 0.8em;">优点是灵活，比如改成没规律的，026-A，13-B，45-AB之类的。</span>
-            </article>
-        </div>
-
-        <div id="gain-utility" class="step center" data-x="800" data-y="800" data-rotate="150">
-            <h1 class="animated" style="--name: flip; animation-delay: 0.6s;">结构与解构</h1>
-            <div class="frame paper animated infinite" style="--name: pulse;">
-                <h2 style="transform: rotate(60deg); left: 500px; top: 160px; color: #FFA000;">基本结构</h2>
-                <h2 style="transform: rotate(-20deg); left: 500px; top: 350px; color: #FFEB3B;">并发、分布式 map-reduce 、惰性求值</h2>
-                <h2 style="transform: rotate(-50deg); left: 700px; top: 100px; color: #FF4081;">重构</h2>
-                <h2 style="transform: rotate(-30deg); left: 30px; top: 60px; color: #4CAF50;">列表处理</h2>
-                <h2 style="transform: rotate(60deg); left: 650px; top: 500px; color: #E040FB;">解构</h2>
-                <h2 style="transform: rotate(15deg); left: 50px; top: 400px; color: #F44336;">Lisp (List Processing) 告诉我们：一切皆列表</h2>
-                <h2 style="transform: rotate(-5deg); left: 50px; top: 250px; color: #D1C4E9;">善用结构变化</h2>
-                <h2 style="transform: rotate(-15deg); left: 0px; top: 500px; color: #FFF9C4;">流|集合 的再思考</h2>
+                <div class="section">
+                    <span class="animated" style="animation-delay: 2.0s; --name: fadeInDown;">
+                        <span>满井智信科技公司</span>
+                        <span>跟学长创业实习</span>
+                    </span>
+                </div>
+                <div class="section">
+                    <span class="animated" style="animation-delay: 3.0s; --name: fadeInDown;">
+                        <span>2017年07月</span>
+                    </span>
+                    <span class="animated" style="animation-delay: 3.0s; --name: fadeInDown;">
+                        <span>加入第七项目中心</span>
+                        <span>星云工作室</span>
+                    </span>
+                </div>
+                <div class="section">
+                    <span class="animated" style="animation-delay: 4.0s; --name: fadeInDown;">
+                        <span>在星云工作室</span>
+                        <span>锻炼与成长</span>
+                    </span>
+                </div>
+                <div class="section">
+                    <span class="animated" style="animation-delay: 5.0s; --name: fadeInDown;">
+                        <span>2018年07月</span>
+                    </span>
+                    <span class="animated" style="animation-delay: 5.0s; --name: fadeInDown;">
+                        <span>毕业于</span>
+                        <span>北京科技大学毕业</span>
+                    </span>
+                </div>
+                <div id="pregress"></div>
             </div>
         </div>
-        <div id="gu0" style="--color: #8BC34A;" class="step board" data-x="1550" data-y="1250" data-rotate="150">
-        </div>
-        <div id="gu1" class="step board" data-x="2300" data-y="500" data-rotate="120">
-        </div>
-        <div id="gu2" class="step board" data-x="500" data-y="1500" data-rotate="180">
+        <div id="chapter01-2" class="step center" data-x="-500" data-y="-1500" data-rotate="-0">
+                <h1 class="chapter-title">自我介绍</h1>
+            <img src="./static/image/自我介绍第二页背景.png" alt="自我介绍第二页背景">
         </div>
 
-        <div id="gain-other" class="step center" data-x="-800" data-y="800" data-rotate="210">
-            <h1 class="animated" style="--name: flip; animation-delay: 0.6s;">#. 其它收获</h1>
-            <div class="frame paper animated infinite" style="--name: flash;">
-                <h1 style="transform: rotate(30deg); left: 400px; top: 150px; color: #FFA000;">团队</h1>
-                <h1 style="transform: rotate(-60deg); left: 550px; top: 350px; color: #FFEB3B;">友谊</h1>
-                <h1 style="transform: rotate(-30deg); left: 600px; top: 200px; color: #FF4081;">经验</h1>
-                <h1 style="transform: rotate(-15deg); left: 100px; top: 350px; color: #E64A19;">快乐</h1>
-                <h1 style="transform: rotate(10deg); left: 400px; top: 400px; color: #03a9f4;">人际关系</h1>
-                <h1 style="transform: rotate(-30deg); left: 200px; top: 60px; color: #4CAF50;">感悟</h1>
-                <h2 style="transform: rotate(60deg); left: 100px; top: 200px; color: #E040FB; text-decoration: line-through;">Money</h2>
+        <div id="chapter02" class="step center" data-x="800" data-y="-600" data-rotate="30">
+            <div class="chapter">
+                <h1>02</h1>
+                <h3>工作回顾/工作概况</h3>
             </div>
         </div>
-        <div id="go0" style="--color: #FFEB3B;" class="step board center" data-x="-1600" data-y="1200" data-rotate="210">
+        <div id="chapter02-1" class="step board" data-x="1400" data-y="-1800" data-rotate-z="180" data-rotate-y="0"
+            data-rotate-x="75">
         </div>
-        <div id="go1" class="step board center" data-x="-1400" data-y="1800" data-rotate-z="0" data-rotate-y="0" data-rotate-x="-75">
+        <div id="chapter02-2" class="step board" data-x="2200" data-y="-1400" data-rotate-z="210" data-rotate-y="60"
+            data-rotate-x="60">
         </div>
-        <div id="go2" class="step board center" data-x="-2200" data-y="1400" data-rotate-z="30" data-rotate-x="-60" data-rotate-y="-60">
+        <div id="chapter02-3" class="step board" data-x="1800" data-y="-600" data-rotate-z="360" data-rotate-y="0"
+            data-rotate-x="-75">
         </div>
-        <div id="go3" class="step board center" data-x="-1800" data-y="600" data-rotate-z="180" data-rotate-y="0" data-rotate-x="75">
+        <div id="chapter02-4" class="step board" data-x="1000" data-y="-1000" data-rotate-z="390" data-rotate-x="-60"
+            data-rotate-y="-60">
         </div>
-        <div id="go4" class="step board center" data-x="-1000" data-y="1000" data-rotate-z="210" data-rotate-y="60" data-rotate-x="60">
+
+        <div id="chapter03" class="step center" data-x="-800" data-y="800" data-rotate="210">
+            <div class="chapter">
+                <h1>03</h1>
+                <h3>职业规划/成长与思考/工作规划与展望</h3>
+            </div>
+        </div>
+        <div id="chapter03-1" class="step board center" data-x="-1400" data-y="1800" data-rotate-z="0" data-rotate-y="0"
+            data-rotate-x="-75">
+        </div>
+        <div id="chapter03-2" class="step board center" data-x="-2200" data-y="1400" data-rotate-z="30" data-rotate-x="-60"
+            data-rotate-y="-60">
+        </div>
+        <div id="chapter03-3" class="step board center" data-x="-1800" data-y="600" data-rotate-z="180" data-rotate-y="0"
+            data-rotate-x="75">
+        </div>
+        <div id="chapter03-4" class="step board center" data-x="-1000" data-y="1000" data-rotate-z="210" data-rotate-y="60"
+            data-rotate-x="60">
+        </div>
+
+        <div id="chapter04" class="step center" data-x="800" data-y="800" data-rotate="150">
+            <div class="chapter">
+                <h1>04</h1>
+                <h3>对星云的建议</h3>
+            </div>
+        </div>
+        <div id="chapter04-1" class="step" data-x="1550" data-y="1250" data-rotate="150">
+        </div>
+        <div id="chapter04-2" class="step" data-x="2300" data-y="500" data-rotate="120">
+        </div>
+        <div id="chapter04-3" class="step" data-x="500" data-y="1500" data-rotate="180">
         </div>
 
         <div id="overview" class="step" data-x="0" data-y="0" data-scale="5"></div>
     </div>
     <!-- covers -->
-    <p class="hint">Use a spacebar or arrow keys to navigate</p>
+    <p class="hint">空格或方向键播放</p>
     <div id="goodbye">
-        <h1>以上，本次分享结束，谢谢</h1>
-        <h3>有什么不足之处或改进意见，尽管指出，大家一起讨论</h3>
+        <h1>我的述职报告结束，感谢聆听</h1>
+        <h3>不足之处还请大家多多指教</h3>
     </div>
-    <video id="op" class="animated" onended="op.classList.add('fadeOut'); setTimeout(() => { op.style.display = 'none'; bgi.play(); }, 1000);" autoplay playsinline preload="auto" controls>
-        <source src="./static/video/start.mp4">
-    </video>
     <!-- control -->
     <div id="control">
         <a href="https://github.com/zhengxiaoyao0716/impress-electron" target="_blank">
@@ -431,10 +183,14 @@
                 </g>
             </svg>
         </a>
-        <audio id="bgi" src="./static/audio/bgi.mp3" controls loop></audio>
         <i class="fa fa-arrows frame-drag" aria-hidden="true"></i>
+        <link rel="stylesheet" href="./static/style/control.css">
     </div>
-    <div id="timer" style="--time: 3600s"></div>
+    <!-- timer -->
+    <div id="timer" style="--time: 180s">
+        <link rel="stylesheet" href="./static/style/timer.css">
+        <script src="./static/script/timer.js"></script>
+    </div>
     <!-- scripts -->
     <div style="display: none;">
         <script src="./static/lib/impress/impress.min.js"></script>
