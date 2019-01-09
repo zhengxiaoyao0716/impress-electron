@@ -121,3 +121,8 @@ body.impress-on-overview #goodbye>* {
 .step.active .animated.hover:hover {
     animation-name: var(--name);
 }
+
+.paper>* {
+    position: absolute;
+    display: block;
+}

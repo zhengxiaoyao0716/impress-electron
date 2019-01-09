@@ -1,3 +1,16 @@
+body.impress-on-welcome .转正述职 .step:not(#welcome),
+body.impress-on-contents .转正述职 .step:not(#contents),
+body.impress-on-chapter01 .转正述职 .step:not(#chapter01),
+body.impress-on-chapter02 .转正述职 .step:not(#chapter02),
+body.impress-on-chapter03 .转正述职 .step:not(#chapter03),
+body.impress-on-chapter04 .转正述职 .step:not(#chapter04),
+body.impress-on-chapter03-1 .转正述职 .step:not(#chapter03-1),
+body.impress-on-chapter03-2 .转正述职 .step:not(#chapter03-2),
+body.impress-on-chapter03-3 .转正述职 .step:not(#chapter03-3),
+body.impress-on-chapter03-4 .转正述职 .step:not(#chapter03-4) {
+    display: none;
+}
+
 .转正述职 .title {
     text-align: center;
     font-family: 隶书;
@@ -21,9 +34,6 @@
     padding-left: 4em;
     margin: 0.8em;
 }
-body.impress-on-contents .转正述职 .step:not(#contents) {
-    display: none;
-}
 .转正述职 .chapter-title {
     width: 100%;
     text-align: left;
@@ -32,6 +42,7 @@ body.impress-on-contents .转正述职 .step:not(#contents) {
     top: -50px;
     padding-left: 1.5em;
     font-size: 28px;
+    color: #fff;
 }
 .转正述职 .chapter-title::before {
     content: "";
@@ -57,9 +68,6 @@ body.impress-on-contents .转正述职 .step:not(#contents) {
 .转正述职 .chapter>h3 {
     margin-top: 150px;
     font-size: 28px;
-}
-body.impress-on-chapter01 .转正述职 .step:not(#chapter01) {
-    display: none;
 }
 
 .转正述职 .timeline {
@@ -141,4 +149,180 @@ body.impress-on-chapter01 .转正述职 .step:not(#chapter01) {
 }
 .转正述职 .timeline>.section:nth-child(even)>span::after {
     height: 150px;
+}
+.转正述职 #chapter01-1 .paper>p {
+    white-space: nowrap;
+}
+.转正述职 #chapter01-2 .paper>p>span {
+    white-space: nowrap;
+    background: var(--color);
+    color: #fff;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    text-align: center;
+    line-height: var(--size);
+    box-shadow: 0 0 3px 3px #00000033;
+}
+.转正述职 #chapter01-2 .paper>p>span::before {
+    content: "";
+    position: absolute;
+    --with: calc(var(--size) / 12);
+    width: calc(var(--size) / 2 - var(--with));
+    height: calc(var(--size) / 2 - var(--with));
+    right: var(--with);
+    top: var(--with);
+    border: var(--with) solid #fff;
+    border-top-right-radius: calc(var(--size) / 2 - var(--with));
+    border-left: transparent;
+    border-bottom: transparent;
+}
+
+.转正述职 #chapter02-1>div,
+.转正述职 #chapter02-2>div {
+    white-space: nowrap;
+}
+.转正述职 #chapter02-1>div>*,
+.转正述职 #chapter02-2>div>* {
+    display: inline-block;
+    vertical-align: middle;
+}
+.转正述职 #chapter02-1>div img,
+.转正述职 #chapter02-2>div img {
+    max-height: 500px;
+    max-width: 800px;
+}
+
+.转正述职 .gallery {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    flex-wrap: wrap;
+}
+.转正述职 .gallery>.card {
+    width: 300px;
+    height: 350px;
+    border: 3px solid #999;
+    position: relative;
+    --color: #666;
+}
+.转正述职 .gallery>.card::before {
+    content: "";
+    left: 0;
+    top: 0;
+    position: absolute;
+    border: 50px solid;
+    border-color: var(--color) transparent transparent var(--color);
+}
+.转正述职 .gallery>.card::after {
+    content: "";
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    border: 50px solid;
+    border-color: transparent var(--color) var(--color) transparent;
+}
+.转正述职 .gallery>.card>h3 {
+    position: absolute;
+    transform: rotate(-45deg);
+    margin: 0;
+    left: -48px;
+    top: -12px;
+    width: 145px;
+    height: 70px;
+    line-height: 90px;
+    border-bottom: 3px solid #999;
+}
+.转正述职 .gallery>.card>i {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+}
+.转正述职 .gallery>.card>i::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    transform: rotate(135deg);
+    margin: 0;
+    right: -48px;
+    bottom: -12px;
+    width: 145px;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 3px solid #999;
+}
+.转正述职 .gallery>.card>p {
+    color: var(--color);
+}
+.转正述职 .gallery>.circle {
+    width: 50%;
+    margin-top: 60px;
+    white-space: nowrap;
+}
+.转正述职 .gallery>.circle>* {
+    display: inline-block;
+}
+.转正述职 .gallery>.circle>h1 {
+    background: #ffffff33;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    text-align: center;
+    line-height: 120px;
+}
+.转正述职 #chapter03-1>.progress {
+    position: absolute;
+    top: 50%;
+    width: 800px;
+}
+.转正述职 #chapter03-1>.progress>hr {
+    display: inline-block;
+    width: 200px;
+    height: 20px;
+    background: #fff;
+    margin: -10px;
+    border: none;
+    border-radius: 20px;
+}
+.转正述职 #chapter03-1>h3 {
+    position: absolute; 
+    padding-left: 40px;
+}
+.转正述职 #chapter03-1>h3>* {
+    margin: 0;
+}
+.转正述职 #chapter03-1>h3:nth-child(odd),
+.转正述职 #chapter03-1>h3:nth-child(odd)::before {
+    top: 0;
+}
+.转正述职 #chapter03-1>h3:nth-child(even),
+.转正述职 #chapter03-1>h3:nth-child(even)::before {
+    bottom: 0;
+}
+.转正述职 #chapter03-1>h3::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    background: var(--color);
+    border-radius: 30px;
+}
+.转正述职 #chapter03-1>h3::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    left: 15px;
+    background: #fff;
+}
+.转正述职 #chapter03-1>h3:nth-child(odd)::after {
+    top: 50px;
+    height: 220px;
+}
+.转正述职 #chapter03-1>h3:nth-child(even)::after {
+    bottom: 50px;
+    height: 200px;
 }
